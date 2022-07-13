@@ -1,0 +1,4 @@
+#!/bin/bash
+mv -f /tmp/picocom.log /tmp/picocom.log.old
+D=/dev/tty${USB:-USB0}
+exec picocom $D -g/tmp/picocom.log --lower-dtr --lower-rts -b115200 "$@"
