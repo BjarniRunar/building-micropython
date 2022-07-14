@@ -16,5 +16,8 @@ Commenting out the download / setup sections is also a simple way to
 save time during iterative development. I want a script for how I set
 up the work environment, even if I don't do it every time.
 
-(If you're in a rush you just uncomment everything and hope for the
-best.)
+If you're in a rush you just uncomment everything and hope for the
+best...
+
+If you are in even more of a rush, there might be binaries here:
+<https://github.com/BjarniRunar/micropython-firmwares>
