@@ -22,7 +22,7 @@ TODAY=$(date +%Y%m%d)                            # Don't comment this out
 # See: https://github.com/raspberrypi/pico-sdk
 #
 # sudo apt-get install \
-#   build-essential git cmake gcc-arm-none-eabi \
+#   build-essential git python3 cmake gcc-arm-none-eabi \
 #   libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
 
 
