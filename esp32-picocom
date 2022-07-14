@@ -1,3 +1,0 @@
-#!/bin/bash
-mv -f /tmp/picocom.log /tmp/picocom.log.old
-picocom /dev/ttyUSB0 -g/tmp/picocom.log -b115200 "$@"
