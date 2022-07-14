@@ -64,13 +64,13 @@ source ./export.sh                               # Don't comment this out
 ### Add the camera driver board definitions
 #
 # cd $BUILDDIR/micropython/ports/esp32/boards
-# cp -va ../../../../micropython-camera-driver/boards/ESP32_CAM/ .
+# cp -va $BUILDDIR/micropython-camera-driver/boards/ESP32_CAM/ .
 
 
 ### Add upagekite to the ports/rp2/modules folder
 #
 # cd $BUILDDIR/micropython/ports/esp32/modules
-# cp -a ../../../../upagekite/upagekite .
+# cp -a $BUILDDIR/upagekite/upagekite .
 # rm -f upagekite/{esp32,__main}*.py
 
 
