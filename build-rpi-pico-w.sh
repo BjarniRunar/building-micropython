@@ -21,8 +21,8 @@ TODAY=$(date +%Y%m%d)                            # Don't comment this out
 # See: https://github.com/micropython/micropython#external-dependencies
 # See: https://github.com/raspberrypi/pico-sdk
 #
-# sudo apt install \
-#   build-essential cmake gcc-arm-none-eabi \
+# sudo apt-get install \
+#   build-essential git cmake gcc-arm-none-eabi \
 #   libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
 
 

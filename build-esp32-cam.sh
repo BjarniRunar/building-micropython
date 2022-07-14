@@ -17,6 +17,17 @@ BUILDDIR=$(pwd)                                  # Don't comment this out
 TODAY=$(date +%Y%m%d)                            # Don't comment this out 
 
 
+### Prerequisites; adapt to your OS as necessary
+#
+# See: https://github.com/micropython/micropython#external-dependencies
+# See: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-setup.html#standard-setup-of-toolchain-for-linux
+#
+# sudo apt-get install \
+#   git wget flex bison gperf python3 python3-pip python3-setuptools \
+#   python3-virtualenv cmake ninja-build ccache libffi-dev libssl-dev \
+#   dfu-util libusb-1.0-0
+
+
 ### Fetch the code we need
 #
 # git clone https://github.com/micropython/micropython.git
