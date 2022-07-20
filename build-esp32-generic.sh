@@ -45,9 +45,10 @@ TODAY=$(date +%Y%m%d)                            # Don't comment this out
 
 ### Set up the ESP32 SDK, import SDK environment variables
 #
-cd $BUILDDIR/esp-idf                             # Don't comment this out 
+export IDF_TOOLS_PATH=$BUILDDIR/esp-tools        # Don't comment this out
+# cd $BUILDDIR/esp-idf
 # ./install.sh
-source ./export.sh                               # Don't comment this out 
+source $BUILDDIR/esp-idf/export.sh               # Don't comment this out
 
 
 ### Build MicroPython tools
