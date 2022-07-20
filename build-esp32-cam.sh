@@ -11,10 +11,10 @@ set -e -x            # Bail on errors, print commands before running them
 ### Cleanup/setup
 #
 # rm -rf build/esp32-cam
-mkdir -p binaries build/esp32-cam                # Don't comment this out 
-cd build/esp32-cam                               # Don't comment this out 
-BUILDDIR=$(pwd)                                  # Don't comment this out 
-TODAY=$(date +%Y%m%d)                            # Don't comment this out 
+mkdir -p binaries build/esp32-cam                # Don't comment this out
+cd build/esp32-cam                               # Don't comment this out
+BUILDDIR=$(pwd)                                  # Don't comment this out
+TODAY=$(date +%Y%m%d)                            # Don't comment this out
 
 
 ### Prerequisites; adapt to your OS as necessary
@@ -49,9 +49,10 @@ TODAY=$(date +%Y%m%d)                            # Don't comment this out
 
 ### Set up the ESP32 SDK, import SDK environment variables
 #
-cd $BUILDDIR/esp-idf                             # Don't comment this out 
+export IDF_TOOLS_PATH=$BUILDDIR/esp-tools        # Don't comment this out
+# cd $BUILDDIR/esp-idf
 # ./install.sh
-source ./export.sh                               # Don't comment this out 
+source $BUILDDIR/esp-idf/export.sh               # Don't comment this out
 
 
 ### Build MicroPython tools
@@ -65,6 +66,13 @@ source ./export.sh                               # Don't comment this out
 #
 # cd $BUILDDIR/micropython/ports/esp32/boards
 # cp -va $BUILDDIR/micropython-camera-driver/boards/ESP32_CAM/ .
+#
+## Reduce further how much RAM MicroPython gets, hopoing to have
+## enough left over for both TLS and camera operations.
+# git checkout $BUILDDIR/micropython/ports/esp32/main.c
+# perl -i.bkp \
+#   -pe 's,heap_total / 2, heap_total / 3,' \
+#   $BUILDDIR/micropython/ports/esp32/main.c
 
 
 ### Add upagekite to the ports/rp2/modules folder
